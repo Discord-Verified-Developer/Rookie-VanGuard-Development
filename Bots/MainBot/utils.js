@@ -1,0 +1,67 @@
+const fetch = require('node-fetch')
+const d = require("discord.js")
+
+function randomText(array) {
+  if(!array) throw new SyntaxError("Provide a valid array")
+  return array[Math.floor(Math.random() * array.length)]
+}
+async function getfromreddit(subreddit) {
+  const res = await (await fetch(`https://www.reddit.com/r/${subreddit}/random/.json`)).json()
+  return res[0].data.children[0].data
+}
+
+async function redditFetch(subreddit) {
+  const res = await (await fetch(`https://www.reddit.com/r/${subreddit}/random/.json`)).json()
+  const self = res[0].data.children[0].data
+  return {
+    title: self.title,
+    image: self.url,
+    url: `https://${self.permalink}`,
+    subreddit: `r/${self.subreddit}`,
+    author: self.author,
+    upvotes: String(self.ups),
+    downvotes: String(self.downs),
+    comments: String(self.num_comments),
+    upvote_ratio: String(self.upvote_ratio),
+    nsfw: String(self.over_18),
+    spoiler: String(self.spoiler)
+  }
+}
+
+function replaceText(str, find, replace) {
+  return str.replace(new RegExp(find, 'g'), replace);
+}
+
+async function numberSeparator(num,separator=",") {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, separator);
+}
+
+async function jsonRequest(url, property) {
+  const r = await fetch(url)
+  const data = await r.json()
+  if (!property) return data
+  return data[String(property)]
+}
+
+async function fileCount(path) {
+  const { readdirSync } = require("fs")
+  return readdirSync(path).length
+}
+
+async function getUserBanner(user_id) {
+  // user_id = option.user_id
+  const r = await fetch(`https://api.popcat.xyz/banners/${user_id}`)
+  if(!r) return(`[getUserBanner]: Invalid user ID in getUserBanner(${user_id})`)
+  data = await r.json()
+  return data.banner
+}
+module.exports = {
+  randomText,
+  replaceText,
+  getfromreddit,
+  redditFetch,
+  jsonRequest,
+  fileCount,
+  getUserBanner
+}
+//["d3a625","eeba30","ae0001","740001","1a472a","2a623d","5d5d5d","aaaaaa","ecb939","f0c75e","726255","372e29","000000","0e1a40","222f5b","946b2d"]
