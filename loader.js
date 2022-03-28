@@ -1,11 +1,13 @@
 const child_process = require("child_process");
+
+// Add your files here
+
 const start_files = [
     "./Bots/MainBot/index.js",
     "./Bots/DeveloperBot/index.js",
     "./Bots/SupportBot/index.js",
     "./Bots/PremiumBot/index.js"
 ];
-// Add your files here
 
 // Don't edit below this line
 
