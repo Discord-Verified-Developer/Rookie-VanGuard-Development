@@ -1,5 +1,5 @@
 module.exports = {
-token: "OTU3NDAxMTMyNzU2NTA4Njcy.Yj-PSQ.ZvD3oF6MNUkTGBz5r9iMjv1CFOY",
+token: "OTU3NDAxMTMyNzU2NTA4Njcy.Yj-PSQ.bqon1HDsbq6JPb7JEevrxGWvDdQ",
 prefix: ["!","$getservervar[prefix]"],
 autoUpdate: false,
 applicationCache: true,

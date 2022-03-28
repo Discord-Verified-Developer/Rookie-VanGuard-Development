@@ -4,7 +4,7 @@ const Aoijs = require('aoi.js');
 const Discord = require('discord.js'); // Scripting language
 // ==================================================
 const bot = new Aoijs.Bot({
-token: "OTU3MTEyNzU2Njc3NTE3MzIy.Yj6Ctw.WAkQANAm6nCj45smLGRwJQsapLs",
+token: "OTU3MTEyNzU2Njc3NTE3MzIy.Yj6Ctw.7caTMrHp9xBQ26Gk8L-ROZnYnQk",
 prefix: ["~"],
 autoUpdate: false,
 applicationCache: true,

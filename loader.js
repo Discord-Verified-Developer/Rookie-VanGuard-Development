@@ -1,33 +1,10 @@
 const child_process = require("child_process");
-
-const express = require('express');
-
-const server = express();
-
 const start_files = [
     "./Bots/MainBot/index.js",
     "./Bots/DeveloperBot/index.js",
     "./Bots/SupportBot/index.js",
     "./Bots/PremiumBot/index.js"
 ];
-
-server.all('/', (req, res) => {
-    res.setHeader('Content-Type', 'text/html');
-
-    res.write(
-        '<link href="https://fonts.googleapis.com/css?family=Roboto Condensed" rel="stylesheet"> <style> body {font-family: "Roboto Condensed";font-size: 22px;} <p>Hosting Active</p>'
-    );
-
-    res.end();
-});
-
-function keepAlive() {
-    server.listen(3000, () => {
-        console.log('Server is online!');
-    });
-}
-
-module.exports = keepAlive;
 // Add your files here
 
 // Don't edit below this line
