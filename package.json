@@ -1,11 +1,25 @@
 {
-  "name": "bots",
+  "name": "Rookie-VanGuard-Development",
   "version": "1.0.0",
   "description": "An example application - make sure to configure this yourself.",
   "main": "loader.js",
   "scripts": {
     "start": "node loader.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Discord-Verified-Developer/Rookie-VanGuard-Development.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Discord-Verified-Developer/Rookie-VanGuard-Development/issues"
+  },
+  "homepage": "https://github.com/Discord-Verified-Developer/Rookie-VanGuard-Development#readme",
+  "dependencies": {
+    "markdown-toc": "^1.2.0"
+  }
+},
   "author": "",
   "license": "ISC",
   "dependencies": {
