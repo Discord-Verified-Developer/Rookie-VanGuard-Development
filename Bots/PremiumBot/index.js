@@ -1,5 +1,4 @@
-require("module-alias/register"); // Module for organization
-// ==================================================
+
 const Aoijs = require('aoi.js'); 
 const Discord = require('discord.js'); // Scripting language
 // ==================================================

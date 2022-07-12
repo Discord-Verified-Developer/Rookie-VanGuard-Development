@@ -6,20 +6,6 @@
   "scripts": {
     "start": "node loader.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Discord-Verified-Developer/Rookie-VanGuard-Development.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Discord-Verified-Developer/Rookie-VanGuard-Development/issues"
-  },
-  "homepage": "https://github.com/Discord-Verified-Developer/Rookie-VanGuard-Development#readme",
-  "dependencies": {
-    "markdown-toc": "^1.2.0"
-  }
-},
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -89,7 +75,6 @@
     "mal-scraper": "^2.11.3",
     "mathjs": "^9.4.4",
     "megadb": "^3.4.0",
-    "module-alias": "^2.2.2",
     "moment": "^2.29.1",
     "mongodb": "^4.1.2",
     "mongoose": "^6.0.7",
@@ -141,9 +126,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
-  },
-  "_moduleAliases": {
-    ".u": "./u"
   },
   "nodeVersion": "12.x"
 }
